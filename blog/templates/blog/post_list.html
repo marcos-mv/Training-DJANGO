@@ -3,6 +3,18 @@
         <div>
             <title>Site do Marquinhos!</title>
         </div>
+        <div>
+            <h1><a href="">Parzival Blog</a></h1>
+        </div>
+        <div>
+            {% for post in posts %}
+                 <div>
+                     <p>publicado em: {{post.published_date}}</p>
+                     <h1><a href="">{{ post.title}}</a></h1>
+                     <p>{{post.text|linebreaksbr}}</p>
+                 </div>
+            {% endfor %}
+        </div>
         
         <div>
             <p>Publicado: 14/02/2019, 13:41</p>
